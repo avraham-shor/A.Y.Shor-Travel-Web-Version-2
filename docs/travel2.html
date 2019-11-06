@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel</title>
+    <link rel="stylesheet" type="text/css" href="travel2.css">
+</head>
+
+<body>
+    <header class="outer ">
+        <div class="destination inner-class" id="destination">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>travel code</th>
+                        <th>travel name</th>
+                        <th>price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+
+        </div>
+        <ul class="add-aorder inner-class" id="add-aorder">
+            <br><br>
+            <div class="out_input"><label id="input_name" class="input_add" for="name">Name</label><input class="input_add_in" id="name"/></div>
+            <div class="out_input"><label id="input_zeut" class="input_add" for="zeut">Zeut</label><input class="input_add_in" id="zeut"  /></div>
+            <div class="out_input"><label id="input_travel_id" class="input_add" for="travel_id">travel Id</label><input class="input_add_in" id="travel_id" /></div>
+            <div class="out_input"><label id="input_passengers" class="input_add" for="passengers">Passengers</label><input class="input_add_in" id="passengers"  /></div><br>
+            <button type="button" id="send" class="send" onclick="send()">send</button>
+        </ul>
+    </header>
+    <br><br><br><br><br>
+    <footer class="outer">
+        <div class="list-orders" id="list-orders">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Zeut</th>
+                        <th>travel name</th>
+                        <th>Pasengers</th>
+                        <th>Total-Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="select">
+            <br>
+            <div>
+                <h2>search by name</h2>
+            </div>
+
+            <div><label for="select_name">Your Name</label>
+                <input type="text" id="select_name">
+                <button type="button" id="find" onclick="find()">Find</button>
+            </div>
+            <br>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Zeut</th>
+                        <th>Name</th>
+                        <th>Destination</th>
+                        <th>Passengers</th>
+                        <th>Total-Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="IL">
+                <div class="IL">
+                    <h2>sum price:</h2>
+                </div>
+                <div id="sum_price_name"></div>
+            </div>
+        </div>
+        <div class="select_destination">
+            <br>
+            <div>
+                <h2>search by destination</h2>
+            </div>
+
+
+
+
+            <div><label for="select_destination">search destination</label>
+                <!-- <input type="text" id="select_destination"> -->
+                <select name="select_destination" id="select_destination">
+                    <option value="London">   London   </option>
+                    <option value="Israel">   Israel   </option>
+                    <option value="Australya">Australya</option>
+                    <option value="Kyev">     Kyev     </option>
+                    <option value="Varsha">   Varsha   </option>
+                    <option value="Frankfort">Frankfort</option>
+                    <option value="Levov">    Levov    </option>
+                    <option value="Vilnius">  Vilnius  </option>
+                    <option value="Turkay">   Turkay   </option>
+                   
+                </select>
+                <button type="button" id="find" onclick="find_destination()">Find</button>
+                <br><br><br>
+                <table class="table_select_destination" border="1">
+                    <thead>
+                        <tr>
+                            <th>Zeut</th>
+                            <th>Name</th>
+                            <th>Id-Travel</th>
+                            <th>Destination</th>
+                            <th>Passengers</th>
+                            <th>Total-Price</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div class="IL">
+                    <div class="IL">
+                        <h2>sum price:</h2>
+                    </div>
+                    <div id="sum_price_Destination"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="travel2.js"></script>
+</body>
+
+</html>
